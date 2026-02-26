@@ -1,0 +1,759 @@
+{
+  "metadata": {
+    "description": "Comprehensive corner case test data for BPoly",
+    "generated_by": "verify_corner_cases.py",
+    "total_cases": 29,
+    "success_cases": 24,
+    "failure_cases": 5
+  },
+  "test_cases": [
+    {
+      "name": "single_interval_constant",
+      "coefficients": [
+        [
+          5.0
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.5,
+        1.0,
+        -0.5,
+        1.5
+      ],
+      "expected_results": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "description": "Constant polynomial on single interval"
+    },
+    {
+      "name": "single_interval_degree5",
+      "coefficients": [
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "expected_results": [
+        1.0,
+        0.2392578125,
+        0.09375,
+        0.4755859375,
+        2.0
+      ],
+      "description": "High degree polynomial on single interval"
+    },
+    {
+      "name": "two_intervals_degree2",
+      "coefficients": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "breakpoints": [
+        0,
+        0.5,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "expected_results": [
+        0.0,
+        0.5,
+        1.0,
+        0.25,
+        0.0
+      ],
+      "description": "Two intervals with degree 2"
+    },
+    {
+      "name": "many_intervals",
+      "coefficients": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "eval_points": [
+        0.5,
+        5.5,
+        9.5
+      ],
+      "expected_results": [
+        0.5,
+        5.5,
+        9.5
+      ],
+      "description": "Many intervals with linear pieces"
+    },
+    {
+      "name": "identical_breakpoints",
+      "should_fail": true,
+      "error_type": "ValueError",
+      "description": "Identical breakpoints should raise error"
+    },
+    {
+      "name": "unsorted_breakpoints",
+      "should_fail": true,
+      "error_type": "ValueError",
+      "description": "Unsorted breakpoints should raise error"
+    },
+    {
+      "name": "empty_coefficients",
+      "should_fail": true,
+      "error_type": "ValueError",
+      "description": "Empty coefficients should raise error"
+    },
+    {
+      "name": "from_derivatives_single_point",
+      "should_fail": true,
+      "error_type": "ValueError",
+      "description": "from_derivatives with single point should fail"
+    },
+    {
+      "name": "from_derivatives_mismatched",
+      "should_fail": true,
+      "error_type": "ValueError",
+      "description": "Mismatched xi/yi dimensions should fail"
+    },
+    {
+      "name": "from_derivatives_linear",
+      "xi": [
+        0,
+        1
+      ],
+      "yi": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "eval_points": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "expected_results": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "description": "Simple linear interpolation"
+    },
+    {
+      "name": "hermite_cubic",
+      "xi": [
+        0,
+        1
+      ],
+      "yi": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "eval_points": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "expected_results": [
+        0.0,
+        0.34375,
+        0.75,
+        1.03125,
+        1.0
+      ],
+      "derivative_1": [
+        1.0,
+        1.625,
+        1.5,
+        0.6250000000000002,
+        -0.9999999999999998
+      ],
+      "description": "Hermite cubic interpolation"
+    },
+    {
+      "name": "mixed_derivative_orders",
+      "xi": [
+        0,
+        0.5,
+        1
+      ],
+      "yi": [
+        [
+          0
+        ],
+        [
+          0.25,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "eval_points": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "expected_results": [
+        0.0,
+        0.0625,
+        0.25,
+        0.5625,
+        1.0
+      ],
+      "description": "Three points with mixed derivative data"
+    },
+    {
+      "name": "large_coefficients",
+      "coefficients": [
+        [
+          10000000000.0
+        ],
+        [
+          20000000000.0
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "expected_results": [
+        10000000000.0,
+        15000000000.0,
+        20000000000.0
+      ],
+      "description": "Very large coefficients"
+    },
+    {
+      "name": "small_coefficients",
+      "coefficients": [
+        [
+          1e-15
+        ],
+        [
+          2e-15
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "expected_results": [
+        1e-15,
+        1.5000000000000001e-15,
+        2e-15
+      ],
+      "description": "Very small coefficients"
+    },
+    {
+      "name": "all_zero_coefficients",
+      "coefficients": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "expected_results": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "All zero coefficients"
+    },
+    {
+      "name": "linear_extrapolation",
+      "coefficients": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        -2,
+        -0.1,
+        1.1,
+        5
+      ],
+      "expected_results": [
+        -2.0,
+        -0.1,
+        1.1,
+        5.0
+      ],
+      "description": "Linear extrapolation far from domain"
+    },
+    {
+      "name": "near_boundary_evaluation",
+      "coefficients": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "breakpoints": [
+        0,
+        0.5,
+        1
+      ],
+      "eval_points": [
+        0.49999999999999,
+        0.5,
+        0.50000000000001
+      ],
+      "expected_results": [
+        2.99999999999996,
+        4.0,
+        4.00000000000004
+      ],
+      "description": "Evaluation very close to interval boundaries"
+    },
+    {
+      "name": "tiny_interval",
+      "coefficients": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1e-12
+      ],
+      "eval_points": [
+        0.0,
+        5e-13,
+        1e-12
+      ],
+      "expected_results": [
+        1.0,
+        1.5,
+        2.0
+      ],
+      "description": "Extremely small interval"
+    },
+    {
+      "name": "derivative_of_constant",
+      "original_coefficients": [
+        [
+          5
+        ]
+      ],
+      "original_breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "derivative_results": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "description": "Derivative of constant should be zero"
+    },
+    {
+      "name": "multiple_derivatives_cubic",
+      "original_coefficients": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "original_breakpoints": [
+        0,
+        1
+      ],
+      "derivative_results": {
+        "order_1": 0.75,
+        "order_2": 3.0,
+        "order_3": 6.0,
+        "order_4": 0.0,
+        "order_5": 0.0
+      },
+      "description": "Multiple derivatives of cubic until zero"
+    },
+    {
+      "name": "high_order_derivative_linear",
+      "original_coefficients": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "derivative_orders": {
+        "order_2": 0.0,
+        "order_3": 0.0,
+        "order_4": 0.0
+      },
+      "description": "High order derivatives of linear polynomial"
+    },
+    {
+      "name": "nan_coefficients",
+      "coefficients": "contains_nan",
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.5
+      ],
+      "expected_results": [
+        "NaN"
+      ],
+      "description": "NaN in coefficients",
+      "contains_nan": true
+    },
+    {
+      "name": "inf_coefficients",
+      "coefficients": "contains_inf",
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        0.5
+      ],
+      "expected_results": [
+        "Infinity"
+      ],
+      "description": "Infinity in coefficients",
+      "contains_inf": true
+    },
+    {
+      "name": "evaluate_at_nan",
+      "coefficients": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "breakpoints": [
+        0,
+        1
+      ],
+      "eval_points": [
+        "nan"
+      ],
+      "expected_results": [
+        "NaN"
+      ],
+      "description": "Evaluation at NaN input"
+    },
+    {
+      "name": "two_points_values_only",
+      "xi": [
+        0,
+        1
+      ],
+      "yi": [
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "eval_points": [
+        0,
+        0.5,
+        1
+      ],
+      "expected_results": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "description": "from_derivatives: two_points_values_only"
+    },
+    {
+      "name": "two_points_with_derivatives",
+      "xi": [
+        0,
+        1
+      ],
+      "yi": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "eval_points": [
+        0,
+        0.5,
+        1
+      ],
+      "expected_results": [
+        1.0,
+        2.375,
+        3.0
+      ],
+      "description": "from_derivatives: two_points_with_derivatives"
+    },
+    {
+      "name": "three_points_values_only",
+      "xi": [
+        0,
+        0.5,
+        1
+      ],
+      "yi": [
+        [
+          0
+        ],
+        [
+          0.25
+        ],
+        [
+          1
+        ]
+      ],
+      "eval_points": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "expected_results": [
+        0.0,
+        0.125,
+        0.25,
+        0.625,
+        1.0
+      ],
+      "description": "from_derivatives: three_points_values_only"
+    },
+    {
+      "name": "three_points_mixed_derivatives",
+      "xi": [
+        0,
+        0.5,
+        1
+      ],
+      "yi": [
+        [
+          0,
+          0
+        ],
+        [
+          0.25
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "eval_points": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "expected_results": [
+        0.0,
+        0.0625,
+        0.25,
+        0.8125,
+        1.0
+      ],
+      "description": "from_derivatives: three_points_mixed_derivatives"
+    },
+    {
+      "name": "four_points_mixed",
+      "xi": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "yi": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          9,
+          6
+        ]
+      ],
+      "eval_points": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2,
+        2.5,
+        3
+      ],
+      "expected_results": [
+        0.0,
+        0.25,
+        1.0,
+        2.25,
+        4.0,
+        6.25,
+        9.0
+      ],
+      "description": "from_derivatives: four_points_mixed"
+    }
+  ]
+}

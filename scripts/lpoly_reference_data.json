@@ -1,0 +1,273 @@
+{
+  "constant": {
+    "coefficients": [
+      5.0
+    ],
+    "breakpoints": [
+      0.0,
+      1.0
+    ],
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "values": [
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0
+    ]
+  },
+  "linear": {
+    "coefficients": [
+      0.5,
+      0.5
+    ],
+    "breakpoints": [
+      0.0,
+      1.0
+    ],
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "values": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "quadratic": {
+    "power_coeffs_on_s": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "coefficients": [
+      0.3333333333333333,
+      0.5,
+      0.16666666666666666
+    ],
+    "breakpoints": [
+      0.0,
+      1.0
+    ],
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "values": [
+      0.0,
+      0.0625,
+      0.25,
+      0.5625,
+      1.0
+    ]
+  },
+  "derivative_quadratic": {
+    "original_coeffs": [
+      0.3333333333333333,
+      0.5,
+      0.16666666666666666
+    ],
+    "derivative_coeffs": [
+      0.5,
+      0.5
+    ],
+    "scale_factor": 2.0,
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "derivative_values": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ]
+  },
+  "antiderivative_constant": {
+    "original_coeffs": [
+      2.0
+    ],
+    "antiderivative_coeffs": [
+      0.0,
+      2.0
+    ],
+    "scale_factor": 0.5,
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "antiderivative_values": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ]
+  },
+  "integration_linear": {
+    "coefficients": [
+      0.5,
+      0.5
+    ],
+    "integral": 0.5
+  },
+  "cubic": {
+    "power_coeffs_on_s": [
+      0.125,
+      0.375,
+      0.375,
+      0.125
+    ],
+    "coefficients": [
+      0.25,
+      0.45,
+      0.25,
+      0.05
+    ],
+    "breakpoints": [
+      0.0,
+      1.0
+    ],
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "values": [
+      -2.7755575615628914e-17,
+      0.015624999999999972,
+      0.125,
+      0.421875,
+      1.0
+    ]
+  },
+  "second_derivative_cubic": {
+    "original_coeffs": [
+      0.25,
+      0.45,
+      0.25,
+      0.05
+    ],
+    "derivative2_coeffs": [
+      0.75,
+      0.75
+    ],
+    "scale_factor": 4.0,
+    "derivative2_values": [
+      0.0,
+      1.5,
+      3.0,
+      4.5,
+      6.0
+    ]
+  },
+  "power_to_legendre": {
+    "power_coeffs_on_x": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "power_coeffs_on_s": [
+      2.75,
+      2.5,
+      0.75
+    ],
+    "legendre_coeffs": [
+      3.0,
+      2.5,
+      0.5
+    ],
+    "eval_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "values": [
+      1.0,
+      1.6875,
+      2.75,
+      4.1875,
+      6.0
+    ]
+  },
+  "legendre_to_power": {
+    "legendre_coeffs": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "power_coeffs": [
+      -0.5,
+      2.0,
+      4.5
+    ],
+    "round_trip_coeffs": [
+      1.0,
+      2.0,
+      3.0
+    ]
+  },
+  "legendre_basis_values": {
+    "s_points": [
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0
+    ],
+    "P0": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "P1": [
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0
+    ],
+    "P2": [
+      1.0,
+      -0.125,
+      -0.5,
+      -0.125,
+      1.0
+    ],
+    "P3": [
+      -1.0,
+      0.4375,
+      0.0,
+      -0.4375,
+      1.0
+    ]
+  }
+}

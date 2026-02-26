@@ -1,0 +1,26 @@
+# Build
+build/
+build2/
+build3/
+*.obj
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.eggs/
+dist/
+
+# Claude Code temp files
+tmpclaude-*
+.claude/
+CLAUDE.md
+IMPROVEMENTS.md
+
+# IDE
+.vs/
+.vscode/
+
+# Test artifacts
+test_output.txt
+nul
